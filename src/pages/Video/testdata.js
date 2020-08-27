@@ -1,6 +1,6 @@
 module.exports = [
     {
-        object: 'People', 
+        object: 'Pedestrains', 
         amount: 50,
     },
     {

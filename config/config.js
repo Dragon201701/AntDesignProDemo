@@ -49,12 +49,6 @@ export default defineConfig({
               redirect: '/welcome',
             },
             {
-              path: '/welcome',
-              name: 'welcome',
-              icon: 'smile',
-              component: './Welcome',
-            },
-            {
               path: '/admin',
               name: 'admin',
               icon: 'crown',
@@ -72,7 +66,7 @@ export default defineConfig({
             },
             {
               name: 'Video',
-              icon: 'smile',
+              icon: 'VideoCameraOutlined',
               path: '/video',
               component: './Video',
             },
