@@ -33,7 +33,7 @@ const videoJsOptions0 = {
   sources: [
     {
        // src: 'rtmp://localhost/live/STREAM_NAME',
-       src: 'rtmp://localhost/live/test0',
+       src: 'rtmp://218.241.82.19:1935/live/test0',
        type: "rtmp/flv",  // 类型可加可不加，目前未看到影响
       // type: 'video/mp4',
     }
@@ -53,7 +53,7 @@ const videoJsOptions1 = {
   sources: [
     {
        // src: 'rtmp://localhost/live/STREAM_NAME',
-       src: 'rtmp://localhost/live/test0',
+       src: 'rtmp://218.241.82.19:1935/live/test1',
        type: "rtmp/flv",  // 类型可加可不加，目前未看到影响
       // type: 'video/mp4',
     }
@@ -101,7 +101,7 @@ export default class Video extends React.Component{
       </div>
     </PageHeaderWrapper>*/
     return (
-      <Card>
+      <div>
         <Row gutter={24}>
         <Col span={12} align="middle" justify="center">
           <VideoPlayer {...videoJsOptions0} />
@@ -112,49 +112,47 @@ export default class Video extends React.Component{
             <Table dataSource={testdata} columns={columns} />
           </Card>
           <Card>
-          <Row gutter={24}>
-            <Col span={8} align="middle" justify="center">
-              <Progress
-              type="circle"
-              strokeColor={{
-                '0%': '#108ee9',
-                '100%': '#87d068',
-              }}
-              percent={60}
-              success={{ percent: 30 }}
-              />
-            </Col>
-          
-                <Col span={8}>
-                  <Card>
-                    <Statistic
-                      title="Traffic compare to yesterday"
-                      value={11.28}
-                      precision={2}
-                      valueStyle={{ color: '#3f8600' }}
-                      prefix={<ArrowUpOutlined />}
-                      suffix="%"
-                    />
-                  </Card>
-                </Col>
-                <Col span={8}>
-                  <Card>
-                    <Statistic
-                      title="Traffic compare to last hour"
-                      value={9.3}
-                      precision={2}
-                      valueStyle={{ color: '#cf1322' }}
-                      prefix={<ArrowDownOutlined />}
-                      suffix="%"
-                    />
-                  </Card>
-                </Col>
-              
-            
-          </Row></Card>
+            <Row gutter={24}>
+              <Col span={8} align="middle" justify="center">
+                <Progress
+                type="circle"
+                strokeColor={{
+                  '0%': '#108ee9',
+                  '100%': '#87d068',
+                }}
+                percent={60}
+                success={{ percent: 30 }}
+                />
+              </Col>
+              <Col span={8}>
+                <Card>
+                  <Statistic
+                    title="Traffic compare to yesterday"
+                    value={11.28}
+                    precision={2}
+                    valueStyle={{ color: '#3f8600' }}
+                    prefix={<ArrowUpOutlined />}
+                    suffix="%"
+                  />
+                </Card>
+              </Col>
+              <Col span={8}>
+                <Card>
+                  <Statistic
+                    title="Traffic compare to last hour"
+                    value={9.3}
+                    precision={2}
+                    valueStyle={{ color: '#cf1322' }}
+                    prefix={<ArrowDownOutlined />}
+                    suffix="%"
+                  />
+                </Card>
+              </Col>
+            </Row>
+          </Card>
         </Col>
         </Row>
-      </Card> 
+      </div> 
     );
   }
 }
